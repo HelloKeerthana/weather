@@ -3,11 +3,15 @@ body{
     background-image: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00NTItZi0wMTQuanBn.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    padding: 10px;
 }
 .weatherForm{
     margin: 20px;
@@ -20,7 +24,8 @@ body{
     border: 2px solid hsla(0, 0%, 20%, 0.3);
     border-radius: 10px;
     margin: 10px;
-    width: 300px;
+    width: 80%;
+    max-width: 300px;
 }
 button[type="submit"]{
     padding: 10px 20px;
@@ -41,6 +46,8 @@ button[type="submit"]:hover{
     border-radius: 10px;
     box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
     min-width: 300px;
+    max-width: 400px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,4 +90,66 @@ p{
     font-weight: bold;
     color: hsla(0, 0%, 0%, 0.75);
 }
-    </style>
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .cityInput {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .card {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h1, p {
+        font-size: 1.2rem;
+    }
+
+    .cityDisplay {
+        font-size: 2.5rem;
+    }
+
+    .tempDisplay, .humidityDisplay, .descDisplay {
+        font-size: 1.5rem;
+    }
+
+    .weatherEmoji {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cityInput {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+
+    button[type="submit"] {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .cityDisplay {
+        font-size: 2rem;
+    }
+
+    .tempDisplay, .humidityDisplay, .descDisplay {
+        font-size: 1.2rem;
+    }
+
+    .weatherEmoji {
+        font-size: 4rem;
+    }
+}
+   
